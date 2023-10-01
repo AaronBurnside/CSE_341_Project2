@@ -5,9 +5,9 @@ const saveItem = (req, res, next) => {
         Department: 'required|string',
         Store: 'required|string',
         City: 'required|string',
-        Stock: 'required|int',
-        Price: 'required|float',
-        Aisle: 'required|int'
+        Stock: 'required|integer',
+        Price: 'required|numeric',
+        Aisle: 'required|integer'
     };
     validator(req.body, validationRule, {}, (err,status)=>{
         if (!status){

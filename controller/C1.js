@@ -68,7 +68,7 @@ const deleteItem = async (req, res) => {
         res.status(400).json('Must use a Valid contact Id for deleting Item')
     }
     const itemId = new ObjectId(req.params.id);
-    const response = await mongodb.getDb().db().collection('collection1').remove({ _id: itemId }, true);
+    const response = await mongodb.getDatabase().db().collection('collection1').deleteOne({ _id: itemId });
     console.log(response);
     if (response.deletedCount > 0) {
       res.status(204).send();

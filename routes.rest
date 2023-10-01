@@ -1,24 +1,24 @@
-GET http://localhost:3000/Collection1
+GET http://localhost:3000/collection1
 
 ###
-GET http://localhost:3000/Collection1/6518b63d33a84c0d8579825c
+GET http://localhost:3000/collection1/6518cad633a84c0d85798260
 
 ###
-POST http://localhost:3000/Collection1
+POST http://localhost:3000/collection1
 content-type: application/json
 
 {
-    "ItemName": "Mango",
-    "Department": "Produce",
-    "Store": "Walmart",
-    "City": "NewYork",
-    "Stock": "74",
-    "Price": "5.00",
-    "Aisle": "13"
+    "ItemName": "Plates",
+    "Department": "Paper",
+    "Store": "Smiths",
+    "City": "Houston",
+    "Stock": "50",
+    "Price": "6.00",
+    "Aisle": "2"
 }
 
 ###
-PUT http://localhost:3000/Collection1/6518b63d33a84c0d8579825c HTTP/1.1
+PUT http://localhost:3000/collection1/6518b63d33a84c0d8579825c HTTP/1.1
 content-type: application/json
 
 {
@@ -33,4 +33,4 @@ content-type: application/json
 
 
 ####
- DELETE  http://localhost:3000/Collection1/650f76dd9eac64049748e39f HTTP/1.1
+ DELETE  http://localhost:3000/collection1/6518d77398c3c735a6e7ab60 HTTP/1.1
