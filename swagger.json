@@ -5,7 +5,7 @@
     "description": "Project2 Api",
     "version": "1.0.0"
   },
-  "host": "cse-341-project1-usua.onrender.com/",
+  "host": "https://cse-341-project2-dhpv.onrender.com",
   "basePath": "/",
   "schemes": [
     "http"
