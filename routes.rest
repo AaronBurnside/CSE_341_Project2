@@ -1,0 +1,36 @@
+GET http://localhost:3000/Collection1
+
+###
+GET http://localhost:3000/Collection1/6518b63d33a84c0d8579825c
+
+###
+POST http://localhost:3000/Collection1
+content-type: application/json
+
+{
+    "ItemName": "Mango",
+    "Department": "Produce",
+    "Store": "Walmart",
+    "City": "NewYork",
+    "Stock": "74",
+    "Price": "5.00",
+    "Aisle": "13"
+}
+
+###
+PUT http://localhost:3000/Collection1/6518b63d33a84c0d8579825c HTTP/1.1
+content-type: application/json
+
+{
+    "ItemName": "Mango",
+    "Department": "Produce",
+    "Store": "Walmart",
+    "City": "NewYork",
+    "Stock": "74",
+    "Price": "5.00",
+    "Aisle": "13"
+}
+
+
+####
+ DELETE  http://localhost:3000/Collection1/650f76dd9eac64049748e39f HTTP/1.1

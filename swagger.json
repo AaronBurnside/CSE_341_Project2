@@ -1,0 +1,184 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Project2 Api",
+    "description": "Project2 Api",
+    "version": "1.0.0"
+  },
+  "host": "cse-341-project1-usua.onrender.com/",
+  "basePath": "/",
+  "schemes": [
+    "https",
+    "http"
+  ],
+  "paths": {
+    "": {
+      "get": {
+        "tags": [
+          "Hello World"
+        ],
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api-docs": {
+      "get": {
+        "description": "",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "Collection1/": {
+      "get": {
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "ItemName": {
+                  "example": "any"
+                },
+                "Department": {
+                  "example": "any"
+                },
+                "Store": {
+                  "example": "any"
+                },
+                "City": {
+                  "example": "any"
+                },
+                "Stock": {
+                  "example": "any"
+                },
+                "Price": {
+                  "example": "any"
+                },
+                "Aisle": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/Collection1/{id}": {
+      "get": {
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "ItemName": {
+                  "example": "any"
+                },
+                "Department": {
+                  "example": "any"
+                },
+                "Store": {
+                  "example": "any"
+                },
+                "City": {
+                  "example": "any"
+                },
+                "Stock": {
+                  "example": "any"
+                },
+                "Price": {
+                  "example": "any"
+                },
+                "Aisle": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "delete": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    }
+  }
+}
