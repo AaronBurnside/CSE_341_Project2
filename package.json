@@ -24,6 +24,7 @@
     "express": "^4.18.2",
     "mongodb": "^6.1.0",
     "mongodg": "^0.1.0",
+    "swagger-ui-express": "^5.0.0",
     "validatorjs": "^3.22.1"
   }
 }
