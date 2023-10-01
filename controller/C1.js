@@ -54,7 +54,7 @@ const updateItem = async(req, res) => {
         Price: req.body.Price,
         Aisle: req.body.Aisle
     };
-    const response = await mongodb.getDatabase().db().collection('Collection1').replaceOne({_id: itemId}, Item);
+    const response = await mongodb.getDatabase().db().collection('Collection1').replaceOne({_id: ItemId}, Item);
     if (response.modifiedCount > 0 ){
         res.status(204).send();
     } else {
@@ -67,7 +67,7 @@ const deleteItem = async (req, res) => {
     if(!ObjectId.isValid(req.params.id)) {
         res.status(400).json('Must use a Valid contact Id for deleting Item')
     }
-    const userId = new ObjectId(req.params.id);
+    const itemId = new ObjectId(req.params.id);
     const response = await mongodb.getDb().db().collection('Collection1').remove({ _id: itemId }, true);
     console.log(response);
     if (response.deletedCount > 0) {
