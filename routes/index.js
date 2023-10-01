@@ -4,5 +4,5 @@ router.use('/', require('./swagger'));
 
 router.get('/', (req, res) => {res.send("Hello World");});
 
-router.use('/CollectionOne', require('./CollectionOne'));
+router.use('/collection1', require('./collection1'));
 module.exports = router;
