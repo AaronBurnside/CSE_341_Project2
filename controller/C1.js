@@ -2,7 +2,7 @@ const mongodb = require('../data/database');
 const ObjectId = require('mongodb').ObjectId;
 
 const getAll = async (req, res) => {
-    const result = await mongodb.getDatabase().db().collection('Collection1').find();
+    const result = await mongodb.getDatabase().db().collection('collection1').find();
     result.toArray().then((lists) => {
         res.setHeader('Content-Type', 'application/json');
         res.status(200).json(lists)
@@ -14,7 +14,7 @@ const getSingle = async (req, res) => {
         res.status(400).json('Must use a Valid contact Id to find Item')
     }
     const ItemId1 = new ObjectId(req.params.id);
-    const result = await mongodb.getDatabase().db().collection('Collection1').find({_id: ItemId1});
+    const result = await mongodb.getDatabase().db().collection('collection1').find({_id: ItemId1});
     result.toArray().then((lists) => {
         res.setHeader('Content-Type', 'application/json');
         res.status(200).json(lists[0])
@@ -33,7 +33,7 @@ const createItem = async(req, res) => {
         Price: req.body.Price,
         Aisle: req.body.Aisle
         };
-    const response = await mongodb.getDatabase().db().collection('Collection1').insertOne(Item);
+    const response = await mongodb.getDatabase().db().collection('collection1').insertOne(Item);
     if (response.acknowledged){
         res.status(204).send();
     } else {
@@ -54,7 +54,7 @@ const updateItem = async(req, res) => {
         Price: req.body.Price,
         Aisle: req.body.Aisle
     };
-    const response = await mongodb.getDatabase().db().collection('Collection1').replaceOne({_id: ItemId}, Item);
+    const response = await mongodb.getDatabase().db().collection('collection1').replaceOne({_id: ItemId}, Item);
     if (response.modifiedCount > 0 ){
         res.status(204).send();
     } else {
@@ -68,7 +68,7 @@ const deleteItem = async (req, res) => {
         res.status(400).json('Must use a Valid contact Id for deleting Item')
     }
     const itemId = new ObjectId(req.params.id);
-    const response = await mongodb.getDb().db().collection('Collection1').remove({ _id: itemId }, true);
+    const response = await mongodb.getDb().db().collection('collection1').remove({ _id: itemId }, true);
     console.log(response);
     if (response.deletedCount > 0) {
       res.status(204).send();
