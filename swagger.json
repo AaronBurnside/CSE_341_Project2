@@ -34,7 +34,7 @@
         }
       }
     },
-    "Collection1/": {
+    "/collection1/": {
       "get": {
         "description": "",
         "produces": [
@@ -90,7 +90,7 @@
         }
       }
     },
-    "/Collection1/{id}": {
+    "/collection1/{id}": {
       "get": {
         "description": "",
         "produces": [
