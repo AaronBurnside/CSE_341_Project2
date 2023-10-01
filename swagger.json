@@ -34,7 +34,7 @@
         }
       }
     },
-    "/collection1/": {
+    "/CollectionOne/": {
       "get": {
         "description": "",
         "produces": [
