@@ -8,7 +8,6 @@
   "host": "cse-341-project1-usua.onrender.com/",
   "basePath": "/",
   "schemes": [
-    "https",
     "http"
   ],
   "paths": {
