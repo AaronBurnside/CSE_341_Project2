@@ -10,6 +10,9 @@ const getAll = async (req, res) => {
 }; 
 
 const getSingle = async (req, res) => {
+    if(!ObjectId.isValid(req.params.id)) {
+        res.status(400).json('Must use a Valid contact Id to find Item')
+    }
     const ItemId1 = new ObjectId(req.params.id);
     const result = await mongodb.getDatabase().db().collection('Collection1').find({_id: ItemId1});
     result.toArray().then((lists) => {
@@ -38,6 +41,9 @@ const createItem = async(req, res) => {
     }
 };
 const updateItem = async(req, res) => {
+    if(!ObjectId.isValid(req.params.id)) {
+        res.status(400).json('Must use a Valid contact Id for updating Item')
+    }
     const ItemId = new ObjectId(req.params.id);
     const Item = {
         ItemName: req.body.ItemName,
@@ -58,6 +64,9 @@ const updateItem = async(req, res) => {
 
 
 const deleteItem = async (req, res) => {
+    if(!ObjectId.isValid(req.params.id)) {
+        res.status(400).json('Must use a Valid contact Id for deleting Item')
+    }
     const userId = new ObjectId(req.params.id);
     const response = await mongodb.getDb().db().collection('Collection1').remove({ _id: itemId }, true);
     console.log(response);
