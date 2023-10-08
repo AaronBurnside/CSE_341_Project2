@@ -1,4 +1,4 @@
-GET http://localhost:3000/collection1
+GET http://localhost:3000/collection1/
 
 ###
 GET http://localhost:3000/collection1/6518ca7833a84c0d8579825d
